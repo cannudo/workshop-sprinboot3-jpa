@@ -26,5 +26,4 @@ public class TestConfig implements CommandLineRunner {
 		sacoDeFarinha.add(liz);
 		userRepository.saveAll(sacoDeFarinha);
 	}
-	
 }
