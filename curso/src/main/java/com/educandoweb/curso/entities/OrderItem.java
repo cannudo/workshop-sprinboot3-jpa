@@ -16,7 +16,7 @@ public class OrderItem implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId
-	private OrderItemPK id = new OrderItemPK();
+	private OrderItemPK id = new OrderItemPK(); /* Este id precisa ser composto. Um item de pedido tem um item e um pedido. Ambas as informações trarão identidade ao item de pedido. */
 	
 	private Integer quantity;
 	private Double price;
@@ -62,6 +62,11 @@ public class OrderItem implements Serializable {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	
+	public Double getSubTotal() {
+		Double resultado = price * quantity;
+		return resultado; 
 	}
 
 	@Override
