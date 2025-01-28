@@ -21,6 +21,7 @@ import com.educandoweb.curso.services.UserService;
 @RestController
 @RequestMapping(value = "/users")
 public class UserResource {
+	
 	@Autowired
 	private UserService service;
 	
